@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 var db;
 
+console.log("connectiong to: " + process.env.MONGO_URI);
 mongodb.MongoClient.connect(process.env.MONGO_URI, function(err, database){
     if(err){
         console.log(err);
